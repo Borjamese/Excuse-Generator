@@ -11,12 +11,7 @@ function getRandomElement(array) {
 
 window.onload = function() {
   // Select random elements from each array
-  let who = getRandomElement([
-    "The dog",
-    "My grandma",
-    "His turtle",
-    "My bird"
-  ]);
+  let who = getRandomElement(["The dog", "My grandma", "My turtle", "My bird"]);
   let action = getRandomElement(["ate", "peed", "crushed", "broke"]);
   let what = getRandomElement(["my homework", "the keys", "the car"]);
   let when = getRandomElement([
@@ -26,7 +21,8 @@ window.onload = function() {
     "during my lunch",
     "while I was praying"
   ]);
-  let excuse = who + " " + action + " " + what + " " + when + ".";
+  let emoji = getRandomElement(["😀", "💩", "😈", "😝"]);
+  let excuse = who + " " + action + " " + what + " " + when + emoji;
   let excuseDisplay = document.getElementById("excusa");
   excuseDisplay.innerText = excuse;
 };
